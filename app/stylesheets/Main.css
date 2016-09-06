@@ -1,0 +1,759 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Layout */
+body{
+
+	width: 1280px;
+	height: 720px;
+	cursor:url(../../arrow.cur), auto;
+}
+
+@font-face{
+
+	font-family:Exo-Medium;
+	src: url(fonts/Exo-Medium.otf);
+}
+
+div#splash_screen{
+
+	display: block;
+	position: absolute;
+	width: 1280px;
+	height: 720px;
+	text-align: center;
+	vertical-align: center;
+	z-index: 10;
+	background:url(../../images/splash_screen1.jpg) no-repeat;
+}
+
+div#splash_screen h1{
+
+	height: 50px;
+	margin-top: 340px;
+}
+
+/**************************************************************************************************
+**** Start Screen <---- START
+**************************************************************************************************/
+
+div#start_screen{
+	display: block;
+	position: absolute;
+	width: 1280px;
+	height: 720px;
+	background:url(../../images/background_game.jpg) no-repeat;
+}
+
+div#naslov{
+
+	position: absolute;
+	top: 50px;
+	left: 40px;
+	display: block;
+	width: 1250px;
+	height: 275px;
+	background: url(../../images/bubble_trouble1.png) no-repeat;
+}
+
+div#div_0{
+	display: block;
+	width:403px;
+	height:60px;
+	background: url(../../images/new_game1.png) no-repeat;
+}
+
+div#div_1{
+	display: block;
+	width:357px;
+	height:60px;
+	background: url(../../images/settings1.png) no-repeat;
+}
+
+div#div_2{
+	display: block;
+	width:362px;
+	height:60px;
+	background: url(../../images/high_score1.png) no-repeat;
+}
+
+div#div_3{
+	display: block;
+	width:362px;
+	height:60px;
+	background: url(../../images/about_us1.png) no-repeat;
+}
+
+div#div0{
+	margin-left: 530px;
+	padding-top: 32px;
+	padding-left: 32px;
+	font-size: 25px;
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	margin-top: 245px;
+	text-align: center;
+	background:url(../../images/green.png) no-repeat;
+}
+
+div#div1{
+
+	margin-left: 530px;
+	padding-top: 30px;
+	padding-left: 35px;
+	font-size: 25px;
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	margin-top: 350px;
+	text-align: center;
+	background:url(../../images/yellow.png) no-repeat;
+}
+
+div#div2{
+
+	margin-left: 530px;
+	padding-top: 33px;
+	padding-left: 35px;
+	font-size: 25px;
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	margin-top: 450px;
+	text-align: center;
+	background:url(../../images/blue.png) no-repeat;
+}
+div#div3{
+
+	margin-left: 530px;
+	padding-top: 33px;
+	padding-left: 35px;
+	font-size: 25px;
+	position: absolute;
+	width: 250px;
+	height: 60px;
+	margin-top: 550px;
+	text-align: center;
+	background:url(../../images/yellow.png) no-repeat;
+}
+
+div.selektovan{
+	box-shadow:	20px 19px 49px 3px rgba(51,48,51,0.7);
+}
+
+/**************************************************************************************************
+**** Start Screen <---- END
+**************************************************************************************************/
+
+div#settings{
+	display: none;
+	width: 1280px;
+	height: 720px;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background:url(../../images/background_game.jpg) no-repeat;
+}
+
+div#settings_natpis{
+	font-size: 48px;
+	display: none;
+	width: 500px;
+	height: 50px;
+	top: -200px;
+	left: -30px;
+	position: absolute;
+	line-height: 50px;
+	text-align: center;
+}
+
+/**************************************************************************************************
+**** New Game Screen <---- START
+**************************************************************************************************/
+
+div#new_game_form{
+	display: none;
+	top:0px;
+	left:0px;
+	position:absolute;
+	width: 1280px;
+	height: 720px;
+	background:url(../../images/background_game.jpg) no-repeat;
+}
+
+div#bubble{
+	display: none;
+	top: 250px;
+	left: 170px;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background: url(../../images/balon.png);
+	background-size: cover;
+	z-index: 30;}
+
+div#timer{
+	display: none;
+	height:90px;
+	width:90px;
+	/*border-radius: 35px;*/
+	top:0px;
+	right:0px;
+	position:absolute;
+	font-size:22px;
+	/*background:#1235b7;*/
+	text-align:center;
+	color:white;
+	line-height:100px;
+	font-family:Exo-Medium;
+	z-index: 16;
+	background: url(../../images/timer.png) no-repeat;
+}
+
+div#timer2{
+	/*display: none;*/
+	display: block;
+	height:190px;
+	width:190px;
+	/*border-radius: 5px;*/
+	top: 20px;
+	left: 470px;
+	text-align: center;
+	position:absolute;
+	font-size:50px;
+
+	/*background:#1235b7;*/
+	text-align:center;
+	color:white;
+	line-height:195px;
+	font-family:Exo-Medium;
+	z-index: 30;
+	background: url(../../images/timer2.png) no-repeat;
+}
+
+div#popup{
+	position: absolute;
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin-top: 210px;
+	margin-left: 440px;
+	/* background-color: rgba(226,159,25,0.8); */
+	border-radius: 100px;
+	z-index: 25;
+}
+
+div#scale{
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin-top: 280px;
+	/*margin-left: 160px;*/
+	left: -206px;
+	background-color: rgba(0,159,25,0.8);
+	line-height:  50px;
+	text-align: center;
+	font-size: 20px;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+/*settings*/
+div#back{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	background-color: #F44336;
+	top: 110%;
+	left: 150px;
+	text-align: center;
+	line-height: 50px;
+	font-family:Exo-Medium;
+	border-radius: 20px;
+
+}
+/*score*/
+div#score_back{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	background-color: #F44336;
+	top: 335px;
+	left: 355px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 18;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+div#score_replay{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	background-color: green;
+	top: 335px;
+	right: 400px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 18;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+/*about*/
+div#back_about{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	background-color: #F44336;
+	top: 520px;
+	left: 570px;
+	text-align: center;
+	line-height: 50px;
+	font-family:Exo-Medium;
+	border-radius: 20px;
+}
+div#real_time_score{
+	background: url(../../images/score.png) no-repeat;
+	height:70px;
+	width:70px;
+	top: 5px;
+	left:15px;
+	position:absolute;
+	font-size:22px;
+	text-align: center;
+	color:white;
+	line-height:70px;
+	font-family:Exo-Medium;
+	z-index: 16;
+}
+/*Settings_bubble size*/
+div#bubble_size{
+	width: 148px;
+	height: 50px;
+	position: absolute;
+	top: 110%;
+	left: -255px;
+	z-index: 30;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+div#bubble_minus{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #F44336;
+	text-align: center;
+	line-height:  50px;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+
+div#bubble_plus{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #009688;
+	right: 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+
+}
+/************************************/
+/*timer click*/
+div#timer_click{
+	width: 148px;
+	height: 50px;
+	position: absolute;
+	top: 110%;
+	right: -255px;
+	z-index: 30;
+}
+div#timer_minus{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #F44336;
+	text-align: center;
+	line-height:  50px;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+
+div#timer_plus{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #009688;
+	right: 0;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+
+
+div#container{
+	width: 1280px;
+	height: 720px;
+	top:0px;
+	left:0px;
+	position:absolute;
+	display:none;
+	z-index: 18;
+}
+
+div.senka{
+	background-color:black;
+	opacity:0.5;
+	width: 1280px;
+	height: 720px;
+	top:0px;
+	left:0px;
+	position:absolute;
+	z-index: 17;
+}
+
+div#score{
+	width:500px;
+	height:100px;
+	top:480px;
+	left:580px;
+	position:absolute;
+	font-size:25px;
+	background:#1235b7;
+	text-align:center;
+	color:white;
+	line-height:100px;
+	font-family:Exo-Medium;
+	border-radius: 10px;
+	z-index: 18;
+}
+
+/**************************************************************************************************
+**** New Game Screen <---- END
+**************************************************************************************************/
+
+/**************************************************************************************************
+**** High Score Screen <---- START
+**************************************************************************************************/
+.hs_bck{
+	width: 900px;
+	height: 550px;
+	background: white;
+	opacity: 0.4;
+	position: absolute;
+	top: 0px;
+	left: 180px;
+	border-radius: 20px;
+}
+#naslov_high_score{
+	position: absolute;
+	left: 400px;
+	top: 10px;
+	font-family:Exo-Medium;
+	
+}
+div#high_score_screen{
+	top:80px;
+	left:0px;
+	position:absolute;
+	width: 12800px;
+	height: 720px;
+	font-family:Exo-Medium;
+}
+.score{
+display: none;
+top:0px;
+left:0px;
+position:absolute;
+width: 12800px;
+height: 720px;
+background:url(../../images/background_game.jpg) no-repeat;
+font-family:Exo-Medium;
+}
+.high_score_index{
+	width:278px;
+	height:32px;
+	left:80px;
+	text-align:center;
+	font-size:25px;
+	position:absolute;
+	line-height:28px;
+}
+#hs_index0{
+	top: 105px;
+}
+#hs_index1{
+	top: 145px;
+}
+#hs_index2{
+	top: 190px;
+}
+#hs_index3{
+	top: 235px;
+}
+#hs_index4{
+	top: 275px;
+}
+#hs_index5{
+	top: 314px;
+}
+#hs_index6{
+	top: 356px;
+}
+#hs_index7{
+	top: 397px;
+}
+#hs_index8{
+	top: 440px;
+}
+#hs_index9{
+	top: 480px;
+}
+div.high_score_name
+{
+	width:278px;
+	height:32px;
+	left:220px;
+	text-align:center;
+	font-size:25px;
+	position:absolute;
+	line-height:28px;
+
+}
+div#hs_name0
+{
+	top:105px;
+}
+div#hs_name1
+{
+	top:145px;
+}
+div#hs_name2
+{
+	top:190px;
+}
+div#hs_name3
+{
+	top:235px;
+}
+div#hs_name4
+{
+	top:275px;
+}
+div#hs_name5
+{
+	top:314px;
+}
+div#hs_name6
+{
+	top:356px;
+}
+div#hs_name7
+{
+	top:397px;
+}
+div#hs_name8
+{
+	top:440px;
+}
+div#hs_name9
+{
+	top:480px;
+}
+
+div.high_score_score
+{
+width:253px;
+height:32px;
+left:522px;
+text-align:center;
+font-size:25px;
+position:absolute;
+line-height:28px;
+}
+div#hs_score0
+{
+	top:105px;
+}
+div#hs_score1
+{
+	top:145px;
+}
+div#hs_score2
+{
+	top:190px;
+}
+div#hs_score3
+{
+	top:235px;
+}
+div#hs_score4
+{
+	top:275px;
+}
+div#hs_score5
+{
+	top:314px;
+}
+div#hs_score6
+{
+	top:356px;
+}
+div#hs_score7
+{
+	top:397px;
+}
+div#hs_score8
+{
+	top:440px;
+}
+div#hs_score9
+{
+	top:480px;
+}
+
+div.high_score_vreme
+{
+width:253px;
+height:32px;
+left:800px;
+text-align:center;
+font-size:25px;
+position:absolute;
+line-height:28px;
+}
+div#hs_vreme0
+{
+top:105px;
+}
+div#hs_vreme1
+{
+top:145px;
+}
+div#hs_vreme2
+{
+top:190px;
+}
+div#hs_vreme3
+{
+top:235px;
+}
+div#hs_vreme4
+{
+top:275px;
+}
+div#hs_vreme5
+{
+top:314px;
+}
+div#hs_vreme6
+{
+top:356px;
+}
+div#hs_vreme7
+{
+top:397px;
+}
+div#hs_vreme8
+{
+top:440px;
+}
+div#hs_vreme9
+{
+top:480px;
+}
+#back_hs{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	background-color: #F44336;
+	top: 580px;
+	left: 550px;
+	text-align: center;
+	line-height: 50px;
+	font-family:Exo-Medium;
+	border-radius: 20px;
+}
+#hs_name_d, #hs_vreme_d, #hs_score_d{
+	font-size: 40px;
+	margin-top: 15px;
+}
+/**************************************************************************************************
+**** High Score Screen <---- END
+**************************************************************************************************/
+
+/**************************************************************************************************
+**** About Us Screen <---- START
+**************************************************************************************************/
+#about_us{
+	height: 100%;
+	width: 100%;
+	background:url(../../images/background_game.jpg) no-repeat;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+	font-family:Exo-Medium;
+}
+/**************************************************************************************************
+*/
+#name{
+	width: 300px;
+	height: 40px;
+	position: absolute;
+	top: 300px;
+	left: 680px;
+	text-align: center;
+	z-index: 18;
+}
+#potvrdi{
+	width: 80px;
+	height: 50px;
+	position: absolute;
+	background-color: #009688;
+	top: 385px;
+	left: 790px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 18;
+	border-radius: 20px;
+	font-family:Exo-Medium;
+}
+#container2{
+	width: 1280px;
+	height: 720px;
+	top:0px;
+	left:0px;
+	position:absolute;
+	display:none;
+	z-index: 18;
+}
+#about_content{
+	width: 530px;
+	height: 330px;
+	background: #3366FF;
+	opacity: 0.8;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	border-radius: 20px;
+}
+#about_content p{
+	font-size: 30px;
+	line-height: 60px;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-family:Exo-Medium;
+	color: white;
+}
+/**************************************************************************************************
+**** About Us Screen <---- END
+**************************************************************************************************/

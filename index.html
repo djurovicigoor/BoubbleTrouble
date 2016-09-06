@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>BoubbleTrouble</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/deviceapis.js"></script>
+		<script language="javascript" type="text/javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/jquery-2.2.0.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/Bubble.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/Timer.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/HighScore.js"></script>
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+		<link rel="stylesheet" href="app/stylesheets/animate.css" type="text/css">
+
+		<!-- TODO: Plugins -->
+
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();">
+		<script language="javascript" type="text/javascript" src="$MANAGER_WIDGET/Common/IME/ime2.js"></script>
+
+		<!-- TODO: your code here -->
+
+
+		<div id="splash_screen">
+			<div class="animated infinite pulse" id="naslov"></div>
+		</div>
+
+		<div id="start_screen">
+
+			<div class="animated infinite pulse" id="naslov"></div>
+
+			<div id="div0" ><div class="start_screen_class" id="div_0"></div></div>
+			<div id="div1" ><div class="start_screen_class" id="div_1"></div></div>
+			<div id="div2" ><div class="start_screen_class" id="div_2"></div></div>
+			<div id="div3" ><div class="start_screen_class" id="div_3"></div></div>
+
+		</div>
+
+		<div class="animated infinite pulse" id="bubble"></div>
+		<div id="timer">20</div>
+
+		<audio id="myAudio">
+		  <source src="mp3/tick_tock.mp3" type="audio/mpeg">
+		</audio>
+
+		<div id="new_game_form">
+			<div id="real_time_score">0</div>
+		</div>
+		<div id="about_us">
+			<img src="images/logo.png"/>
+			<div id="about_content">
+				<p>
+					Adresa: Aleksandra Medvedeva 20, Niš
+					<br>
+					Telefon: +381 18 588 211
+					<br>
+					FAX: +381 18 588 210
+					<br>
+					E-mail: appsteam@vtsnis.edu.rs
+				</p>
+			</div>
+			<div id="back_about">Back</div>
+		</div>
+		<div id="settings">
+
+			<div id="senka"></div>
+			<div id="popup">
+				<div id="settings_natpis"></div>
+				<div id="timer2">20</div>
+				<div id="scale">2</div>
+				<div id="back">Back</div>
+				<div id="bubble_size">
+					<div id="bubble_plus" onclick="Main.bubble_size_plus()">+</div>
+					<div id="bubble_minus" onclick="Main.bubble_size_minus()">-</div>
+				</div>
+				<div id="timer_click">
+					<div id="timer_plus" onclick="Main.update_timer_plus()">+</div>
+					<div id="timer_minus" onclick="Main.update_timer_minus()">-</div>
+				</div>
+			</div>
+
+
+		</div>
+		<div class='score'>
+			<h1 id="naslov_high_score">3</h1>
+			<div id="high_score_screen">
+				<!--<div class="animated infinite pulse" id="naslov"></div>-->
+				<div class="hs_bck"></div>
+
+				<div id="hs_index0" class="high_score_index">1.</div>
+				<div id="hs_index1" class="high_score_index">2.</div>
+				<div id="hs_index2" class="high_score_index">3.</div>
+				<div id="hs_index3" class="high_score_index">4.</div>
+				<div id="hs_index4" class="high_score_index">5.</div>
+				<div id="hs_index5" class="high_score_index">6.</div>
+				<div id="hs_index6" class="high_score_index">7.</div>
+				<div id="hs_index7" class="high_score_index">8.</div>
+				<div id="hs_index8" class="high_score_index">9.</div>
+				<div id="hs_index9" class="high_score_index">10.</div>
+
+
+				<div id="hs_name_d" class="high_score_name">Name</div>
+				<div id="hs_name0" class="high_score_name">Nije upisano</div>
+				<div id="hs_name1" class="high_score_name">Nije upisano</div>
+				<div id="hs_name2" class="high_score_name">Nije upisano</div>
+				<div id="hs_name3" class="high_score_name">Nije upisano</div>
+				<div id="hs_name4" class="high_score_name">Nije upisano</div>
+				<div id="hs_name5" class="high_score_name">Nije upisano</div>
+				<div id="hs_name6" class="high_score_name">Nije upisano</div>
+				<div id="hs_name7" class="high_score_name">Nije upisano</div>
+				<div id="hs_name8" class="high_score_name">Nije upisano</div>
+				<div id="hs_name9" class="high_score_name">Nije upisano</div>
+
+				<div id="hs_score_d" class="high_score_score">Score</div>
+				<div id="hs_score0" class="high_score_score">Nije upisano</div>
+				<div id="hs_score1" class="high_score_score">Nije upisano</div>
+				<div id="hs_score2" class="high_score_score">Nije upisano</div>
+				<div id="hs_score3" class="high_score_score">Nije upisano</div>
+				<div id="hs_score4" class="high_score_score">Nije upisano</div>
+				<div id="hs_score5" class="high_score_score">Nije upisano</div>
+				<div id="hs_score6" class="high_score_score">Nije upisano</div>
+				<div id="hs_score7" class="high_score_score">Nije upisano</div>
+				<div id="hs_score8" class="high_score_score">Nije upisano</div>
+				<div id="hs_score9" class="high_score_score">Nije upisano</div>
+
+				<div id="hs_vreme_d" class="high_score_vreme">Time</div>
+				<div id="hs_vreme0" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme1" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme2" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme3" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme4" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme5" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme6" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme7" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme8" class="high_score_vreme">Nije upisano</div>
+				<div id="hs_vreme9" class="high_score_vreme">Nije upisano</div>
+				<div id="back_hs">Back</div>
+			</div>
+		</div>
+
+		<div id="container">
+			<div id="score_back">Back</div>
+			<div id="score_replay">Replay</div>
+			<div class="senka"></div>
+		</div>
+		<div id="container2">
+			<div class="senka"></div>
+			<div id="score"></div>
+			<input type="text" id="name">
+			<div id="potvrdi">Potvrdi</div>
+		</div>
+	</body>
+</html>
